@@ -42,8 +42,8 @@ class VPFemaleSelectView: UIView, UIPickerViewDelegate, UIPickerViewDataSource {
 
     let selectPickerView:UIPickerView = UIPickerView()
     
-    let physiologicalArray = ["取消","月经期","备孕期","预产期","宝妈期"]
-    let sexArray = ["男","女"]
+    let physiologicalArray = ["Cancel","Menstrual Period","Pregnancy Period","Expected Date","Baoma Period""]
+    let sexArray = ["men and women"]
     
     var a = 0,b = 0,c = 0
     
@@ -94,19 +94,19 @@ class VPFemaleSelectView: UIView, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @objc func cancelOrConfirmAction(sender: UIButton) {
         if sender.tag == 1 {
-            if selectViewTitle == "生理期选择" {
+            if selectViewTitle == "Menstrual period selection" {
                 femaleModel?.femaleState = VPDeviceFemaleState(rawValue: a)!
-            }else if selectViewTitle == "最后经期日期" {
+            }else if selectViewTitle == "Date of last menstrual period" {
                 femaleModel?.lastMenstrualDate = String(format: "%04d", a + 2001) + "-" + String(format: "%02d", b + 1) + "-" + String(format: "%02d", c + 1)
-            }else if selectViewTitle == "经期周期" {
+            }else if selectViewTitle == "Menstrual cycle" {
                 femaleModel?.menstrualCircle = a + 7
-            }else if selectViewTitle == "经期正常持续天数" {
+            }else if selectViewTitle == "Normal duration of menstrual period" {
                 femaleModel?.menstrualDays = a + 1
-            }else if selectViewTitle == "宝宝生日" {
+            }else if selectViewTitle == "Baby birthday" {
                 femaleModel?.babyBirthday = String(format: "%04d", a + 2001) + "-" + String(format: "%02d", b + 1) + "-" + String(format: "%02d", c + 1)
-            }else if selectViewTitle == "宝宝性别" {
+            }else if selectViewTitle == "Baby gender" {
                 femaleModel?.isGirl = a == 1
-            }else {//预产期
+            }else {//Due date
                 femaleModel?.expectedDateOfChildbirth = String(format: "%04d", a + 2001) + "-" + String(format: "%02d", b + 1) + "-" + String(format: "%02d", c + 1)
             }
         }
