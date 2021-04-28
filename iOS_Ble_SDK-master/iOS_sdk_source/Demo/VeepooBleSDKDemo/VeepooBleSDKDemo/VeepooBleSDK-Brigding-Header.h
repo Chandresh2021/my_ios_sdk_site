@@ -3,7 +3,7 @@
 //  VeepooBleSDKDemo Zhang Chong
 //
 //  Created by Zhang Chong on 17/2/14.
-//  Copyright © 2017年 zc.All rights reserved.
+//  Copyright © 2017 year zc.All rights reserved.
 //
 
 #ifndef VeepooBleSDK_Brigding_Header_h
