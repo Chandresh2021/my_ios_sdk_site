@@ -2,8 +2,8 @@
 //  VPTest.m
 //  VeepooBleSDKDemo
 //
-//  Created by 张冲 on 17/6/1.
-//  Copyright © 2017年 zc.All rights reserved.
+//  Created by Zhang Chong on 17/6/1.
+//  Copyright © 2017 year zc.All rights reserved.
 //
 
 #import "VPTest.h"
