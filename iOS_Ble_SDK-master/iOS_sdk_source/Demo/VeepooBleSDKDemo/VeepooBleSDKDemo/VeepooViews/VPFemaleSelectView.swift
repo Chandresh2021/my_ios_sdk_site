@@ -2,8 +2,8 @@
 //  VPFemaleSelectView.swift
 //  VeepooBleSDKDemo
 //
-//  Created by 张冲 on 17/6/14.
-//  Copyright © 2017年 zc.All rights reserved.
+//  Created by Zhang Chong on 17/6/14.
+//  Copyright © 2017 year zc.All rights reserved.
 //
 
 /*
@@ -70,14 +70,14 @@ class VPFemaleSelectView: UIView, UIPickerViewDelegate, UIPickerViewDataSource {
         let cancelBtn = UIButton(type: .custom)
         cancelBtn.frame = CGRect(x: 10, y: 0, width: 40, height: seletctTopView.frame.height)
         cancelBtn.tag = 0
-        cancelBtn.setTitle("取消", for: .normal)
+        cancelBtn.setTitle("cancel", for: .normal)
         cancelBtn.addTarget(self, action: #selector(cancelOrConfirmAction(sender:)), for: .touchUpInside)
         seletctTopView.addSubview(cancelBtn)
         
         let confirmBtn = UIButton(type: .custom)
         confirmBtn.frame = CGRect(x: seletctTopView.frame.width - 50, y: 0, width: 40, height: seletctTopView.frame.height)
         confirmBtn.tag = 1
-        confirmBtn.setTitle("确定", for: .normal)
+        confirmBtn.setTitle("cancel", for: .normal)
         confirmBtn.addTarget(self, action: #selector(cancelOrConfirmAction(sender:)), for: .touchUpInside)
         seletctTopView.addSubview(confirmBtn)
         
