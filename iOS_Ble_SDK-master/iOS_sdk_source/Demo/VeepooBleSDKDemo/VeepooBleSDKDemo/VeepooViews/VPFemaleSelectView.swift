@@ -166,9 +166,10 @@ I'm tired，Don't want to write
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: pickerView.frame.size.width/3, height: 44))
         label.textColor = UIColor.brown
         label.textAlignment = .center
-        if selectViewTitle == "生理期选择" {//四种生理期
+        if selectViewTitle == "Menstrual period selection" {//Four physiological periods
             label.text = physiologicalArray[row]
-        }else if selectViewTitle == "最后经期日期" || selectViewTitle == "宝宝生日" || selectViewTitle == "预产期" {//这里没有对日期进行逻辑处理，就是简单的功能实现，如出现9月份有31日的，你们自己设置的时候注意一下就好，我累了，不想写
+        }else if selectViewTitle == "Date of last menstrual period" || selectViewTitle == "Baby birthday" || selectViewTitle == "
+Due date" {//There is no logical processing of the date here, but a simple function implementation. If there is a 31st in September, just pay attention when you set it yourself. I'm tired and don't want to write.
             if component == 0 {//（2001-2017）
                 label.text =  String(row+2001)
             }else if component == 1 {
@@ -176,11 +177,11 @@ I'm tired，Don't want to write
             }else {
                 label.text =  String(row+1)
             }
-        }else if selectViewTitle == "经期周期" {//两次经期的正常间隔（7-46）
+        }else if selectViewTitle == "Menstrual cycle" {//The normal interval between menstrual periods（7-46）
             label.text =  String(row + 7)
-        }else if selectViewTitle == "经期正常持续天数" {//从来月经到走（1-15）
+        }else if selectViewTitle == "Normal duration of menstrual period" {//From menstruation to walking（1-15）
             label.text =  String(row + 1)
-        }else if selectViewTitle == "宝宝性别" {//男或者女
+        }else if selectViewTitle == "Baby gender" {//Male or female
             label.text =  sexArray[row]
         }
         return label
