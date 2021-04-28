@@ -15,7 +15,8 @@ Writing this demo is mainly to tell developers who use SDK，How to call the int
 4.Menstrual period length, that is, how many days it takes from menstruation to disappearance of menstruation, 5-6 days for average people
 5.If the App needs to do this function, it is recommended to refer to Meiyou and Auntie, and search for various parameters on the Internet. We only provide the development interface, and the developer and the product manager need to define the details.
 
-最后说一句，我这写的不好的不要吐槽，本身能让开发者看懂大概意思就可以了，我也是抽时间写demo的，哈哈此功能到此结束，休息一会
+
+Finally, don’t complain about my bad writing. It’s enough for the developer to understand the general meaning. I also took the time to write a demo. Haha, this feature is over. Let’s take a break.
  */
 
 import UIKit
