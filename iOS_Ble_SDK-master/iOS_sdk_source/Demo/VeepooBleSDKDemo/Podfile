@@ -1,0 +1,17 @@
+#use_frameworks!个别需要用到它，比如reactiveCocoa
+platform :ios, '9.0'
+use_frameworks!
+
+target 'VeepooBleSDKDemo' do
+
+#OC pod集成也是这样的
+
+pod 'iOSDFULibrary', '~> 4.1.0’
+
+pod 'FMDB'
+
+pod 'AFNetworking', '~> 4.0'
+
+pod 'MJExtension'
+
+end
