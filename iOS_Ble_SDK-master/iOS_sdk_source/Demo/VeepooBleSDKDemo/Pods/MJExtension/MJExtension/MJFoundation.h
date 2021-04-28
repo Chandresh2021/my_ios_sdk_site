@@ -3,7 +3,7 @@
 //  MJExtensionExample
 //
 //  Created by MJ Lee on 14/7/16.
-//  Copyright (c) 2014年 小码哥. All rights reserved.
+//  Copyright (c) 2014 year Little Code. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
