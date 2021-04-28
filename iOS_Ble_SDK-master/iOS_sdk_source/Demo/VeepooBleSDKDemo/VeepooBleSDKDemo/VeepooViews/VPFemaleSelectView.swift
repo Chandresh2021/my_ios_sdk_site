@@ -116,19 +116,19 @@ class VPFemaleSelectView: UIView, UIPickerViewDelegate, UIPickerViewDataSource {
     
     // MARK: - pickerView DataSorce和delegate
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        if selectViewTitle == "生理期选择" {
+        if selectViewTitle == "Menstrual period selection" {
             return 1
-        }else if selectViewTitle == "最后经期日期" {
+        }else if selectViewTitle == "Date of last menstrual period" {
             return 3
-        }else if selectViewTitle == "经期周期" {
+        }else if selectViewTitle == "Menstrual cycle" {
             return 1
-        }else if selectViewTitle == "经期正常持续天数" {
+        }else if selectViewTitle == "Normal duration of menstrual period" {
             return 1
-        }else if selectViewTitle == "宝宝生日" {
+        }else if selectViewTitle == "Baby birthday" {
             return 3
-        }else if selectViewTitle == "宝宝性别" {
+        }else if selectViewTitle == "Baby gender" {
             return 1
-        }else if selectViewTitle == "预产期"{//预产期
+        }else if selectViewTitle == "Due date"{//Due date
             return 3
         }
         return 0
