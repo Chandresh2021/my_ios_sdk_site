@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  VeepooBleSDKDemo
 //
-//  Created by 张冲 on 17/2/14.
-//  Copyright © 2017年 zc.All rights reserved.
+//  Created by Zhang Chong on 17/2/14.
+//  Copyright © 2017 year zc.All rights reserved.
 //
 
 import UIKit
@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = mainNavi;
         
         window?.makeKeyAndVisible()
-        //先初始化VPBleCentralManage，也可以在主控制器中初始化，总之就是在使用蓝牙功能前初始化
+        //InitializefirstVPBleCentralManage，Can also be initialized in the main controller，In short, it is initialized before using the Bluetooth function
 //        let veepooBleManager: VPBleCentralManage = VPBleCentralManage.sharedBleManager()
         
         let centralManagerIdentifiers = launchOptions?[UIApplicationLaunchOptionsKey.bluetoothCentrals]
