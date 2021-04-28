@@ -7,12 +7,13 @@
 //
 
 /*
-此部门逻辑不是十分严谨，写这个demo主要是告诉使用SDK的开发者，如何调用接口及大体的使用逻辑，
-1.女性项目一般分为4个生理期：经期、备孕期、预产期、宝妈期
-2.在经期、备孕期、宝妈期手环都需要知道用户最后一次来月经的时间
-3.一般经期的周期，即两次月经时间的间隔，不同人的体质不同因人而异默认一般28天
-4.经期长度，即从来月经到月经消失要多少天，一般人是5-6天
-5.如果App需要做此功能，建议参考美柚和大姨妈，及网络搜索各种参数，我们仅是提供开发接口，详细的还要开发者及其产品经理去定义
+The logic of this department is not very strict，
+Writing this demo is mainly to tell developers who use SDK，How to call the interface and general usage logic，
+1.The female project is generally divided into 4 menstrual periods：menstruation、Pregnancy period,、Due date、Baoma period
+2.In the menstrual period, pregnancy preparation period, and the pregnant period, the bracelet needs to know the time of the user's last menstruation
+3.Normal menstrual cycle, that is, the interval between two menstrual periods. The physique of different people varies from person to person. The default is 28 days.
+4.Menstrual period length, that is, how many days it takes from menstruation to disappearance of menstruation, 5-6 days for average people
+5.If the App needs to do this function, it is recommended to refer to Meiyou and Auntie, and search for various parameters on the Internet. We only provide the development interface, and the developer and the product manager need to define the details.
 
 最后说一句，我这写的不好的不要吐槽，本身能让开发者看懂大概意思就可以了，我也是抽时间写demo的，哈哈此功能到此结束，休息一会
  */
