@@ -3,7 +3,7 @@
 //  MJExtensionExample
 //
 //  Created by MJ Lee on 14/7/16.
-//  Copyright (c) 2014年 小码哥. All rights reserved.
+//  Copyright (c) 2014year Little Code. All rights reserved.
 //
 
 #import "MJFoundation.h"
@@ -19,7 +19,7 @@
     static NSSet *foundationClasses;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        // 集合中没有NSObject，因为几乎所有的类都是继承自NSObject，具体是不是NSObject需要特殊判断
+        // There is no NSObject in the collection, because almost all classes are inherited from NSObject. Whether it is NSObject or not requires special judgment
         foundationClasses = [NSSet setWithObjects:
                               [NSURL class],
                               [NSDate class],
