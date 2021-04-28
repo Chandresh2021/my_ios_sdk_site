@@ -1,6 +1,6 @@
 //
 //  VeepooBleSDK-Brigding-Header.h
-//  VeepooBleSDKDemo
+//  VeepooBleSDKDemo Zhang Chong
 //
 //  Created by 张冲 on 17/2/14.
 //  Copyright © 2017年 zc.All rights reserved.
