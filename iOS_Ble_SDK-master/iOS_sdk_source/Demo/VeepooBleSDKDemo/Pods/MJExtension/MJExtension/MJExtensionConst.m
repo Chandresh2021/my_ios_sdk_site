@@ -4,7 +4,7 @@
 #import <Foundation/Foundation.h>
 
 /**
- *  成员变量类型（属性类型）
+ *  Member variable type（Attribute type）
  */
 NSString *const MJPropertyTypeInt = @"i";
 NSString *const MJPropertyTypeShort = @"s";
