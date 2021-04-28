@@ -4,7 +4,7 @@
 
 #import <Foundation/Foundation.h>
 
-// 信号量
+// signal
 #define MJExtensionSemaphoreCreate \
 static dispatch_semaphore_t signalSemaphore; \
 static dispatch_once_t onceTokenSemaphore; \
@@ -18,15 +18,15 @@ dispatch_semaphore_wait(signalSemaphore, DISPATCH_TIME_FOREVER);
 #define MJExtensionSemaphoreSignal \
 dispatch_semaphore_signal(signalSemaphore);
 
-// 过期
+// Expired
 #define MJExtensionDeprecated(instead) NS_DEPRECATED(2_0, 2_0, 2_0, 2_0, instead)
 
-// 构建错误
+// Build error
 #define MJExtensionBuildError(clazz, msg) \
 NSError *error = [NSError errorWithDomain:msg code:250 userInfo:nil]; \
 [clazz setMj_error:error];
 
-// 日志输出
+// Build error
 #ifdef DEBUG
 #define MJExtensionLog(...) NSLog(__VA_ARGS__)
 #else
@@ -34,9 +34,9 @@ NSError *error = [NSError errorWithDomain:msg code:250 userInfo:nil]; \
 #endif
 
 /**
- * 断言
- * @param condition   条件
- * @param returnValue 返回值
+ * assertion
+ * @param condition   condition
+ * @param returnValue return value
  */
 #define MJExtensionAssertError(condition, returnValue, clazz, msg) \
 [clazz setMj_error:nil]; \
@@ -49,27 +49,28 @@ if ((condition) == NO) { \
 if ((condition) == NO) return returnValue;
 
 /**
- * 断言
- * @param condition   条件
+ * assertion
+ * @param condition   condition
  */
 #define MJExtensionAssert(condition) MJExtensionAssert2(condition, )
 
 /**
- * 断言
- * @param param         参数
- * @param returnValue   返回值
+ * assertion
+ * @param param         parameter
+ * @param returnValue   return value
  */
 #define MJExtensionAssertParamNotNil2(param, returnValue) \
 MJExtensionAssert2((param) != nil, returnValue)
 
 /**
- * 断言
- * @param param   参数
+ * 
+assertion
+ * @param param   parameter
  */
 #define MJExtensionAssertParamNotNil(param) MJExtensionAssertParamNotNil2(param, )
 
 /**
- * 打印所有的属性
+ * Print all attributes
  */
 #define MJLogAllIvars \
 -(NSString *)description \
@@ -79,7 +80,8 @@ MJExtensionAssert2((param) != nil, returnValue)
 #define MJExtensionLogAllProperties MJLogAllIvars
 
 /**
- *  类型（属性类型）
+ *  
+Types of（Attribute type）
  */
 extern NSString *const MJPropertyTypeInt;
 extern NSString *const MJPropertyTypeShort;
