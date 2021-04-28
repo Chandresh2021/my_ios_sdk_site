@@ -2,7 +2,7 @@
 //  VeepooBleSDK-Brigding-Header.h
 //  VeepooBleSDKDemo Zhang Chong
 //
-//  Created by 张冲 on 17/2/14.
+//  Created by Zhang Chong on 17/2/14.
 //  Copyright © 2017年 zc.All rights reserved.
 //
 
