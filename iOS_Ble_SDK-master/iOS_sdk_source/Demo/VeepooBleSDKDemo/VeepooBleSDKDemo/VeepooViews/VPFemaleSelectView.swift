@@ -135,9 +135,11 @@ class VPFemaleSelectView: UIView, UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        if selectViewTitle == "生理期选择" {//四种生理期
+        if selectViewTitle == "Menstrual period selection" {//Four physiological periods
             return 5
-        }else if selectViewTitle == "最后经期日期" || selectViewTitle == "宝宝生日" || selectViewTitle == "预产期" {//这里没有对日期进行逻辑处理，就是简单的功能实现，如出现9月份有31日的，你们自己设置的时候注意一下就好，我累了，不想写
+        }else if selectViewTitle == "Date of last menstrual period" || selectViewTitle == "Baby birthday" || selectViewTitle == "Due date" {//
+There is no logical processing of dates here，It's simple function realization，If there are 31 days in September，Just pay attention when you set it yourself，
+I'm tired，Don't want to write
             if component == 0 {//（2001-2019）
                 return 19
             }else if component == 1 {
@@ -145,11 +147,11 @@ class VPFemaleSelectView: UIView, UIPickerViewDelegate, UIPickerViewDataSource {
             }else {
                 return 31
             }
-        }else if selectViewTitle == "经期周期" {//两次经期的正常间隔（7-46）
+        }else if selectViewTitle == "Menstrual cycle" {//The normal interval between menstrual periods（7-46）
             return 40
-        }else if selectViewTitle == "经期正常持续天数" {//从来月经到走（1-15）
+        }else if selectViewTitle == "Normal duration of menstrual period" {//From menstruation to walking（1-15）
             return 15
-        }else if selectViewTitle == "宝宝性别" {//男或者女
+        }else if selectViewTitle == "Baby gender" {//Male or female
             return 2
         }
         return 3
