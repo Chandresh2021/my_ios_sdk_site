@@ -3,88 +3,90 @@
 //  MJExtensionExample
 //
 //  Created by MJ Lee on 15/8/11.
-//  Copyright (c) 2015年 小码哥. All rights reserved.
+//  Copyright (c) 2015year Little Code. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
 /**
- *  遍历所有类的block（父类）
+ *  Traverse all types of blocks（father）
  */
 typedef void (^MJClassesEnumeration)(Class c, BOOL *stop);
 
-/** 这个数组中的属性名才会进行字典和模型的转换 */
+/** The attribute names in this array will be converted from dictionary to model */
 typedef NSArray * (^MJAllowedPropertyNames)(void);
-/** 这个数组中的属性名才会进行归档 */
+/** The attribute names in this array will be archived */
 typedef NSArray * (^MJAllowedCodingPropertyNames)(void);
 
-/** 这个数组中的属性名将会被忽略：不进行字典和模型的转换 */
+/** Property names in this array will be ignored：No dictionary and model conversion */
 typedef NSArray * (^MJIgnoredPropertyNames)(void);
-/** 这个数组中的属性名将会被忽略：不进行归档 */
+/** Property names in this array will be ignored：Do not archive */
 typedef NSArray * (^MJIgnoredCodingPropertyNames)(void);
 
 /**
- * 类相关的扩展
+ * Class-related extensions
  */
 @interface NSObject (MJClass)
 /**
- *  遍历所有的类
+ *  Traverse all classes
  */
 + (void)mj_enumerateClasses:(MJClassesEnumeration)enumeration;
 + (void)mj_enumerateAllClasses:(MJClassesEnumeration)enumeration;
 
-#pragma mark - 属性白名单配置
+#pragma mark - Attribute whitelist configuration
 /**
- *  这个数组中的属性名才会进行字典和模型的转换
+ *  The attribute names in this array will be converted from dictionary to model
  *
- *  @param allowedPropertyNames          这个数组中的属性名才会进行字典和模型的转换
+ *  @param allowedPropertyNames          The attribute names in this array will be converted from dictionary to model
  */
 + (void)mj_setupAllowedPropertyNames:(MJAllowedPropertyNames)allowedPropertyNames;
 
 /**
- *  这个数组中的属性名才会进行字典和模型的转换
+ *  The attribute names in this array will be converted from dictionary to model
  */
 + (NSMutableArray *)mj_totalAllowedPropertyNames;
 
-#pragma mark - 属性黑名单配置
+#pragma mark - Property blacklist configuration
 /**
- *  这个数组中的属性名将会被忽略：不进行字典和模型的转换
+ *  Property names in this array will be ignored：No dictionary and model conversion
  *
- *  @param ignoredPropertyNames          这个数组中的属性名将会被忽略：不进行字典和模型的转换
+ *  @param ignoredPropertyNames          Property names in this array will be ignored：No dictionary and model conversion
  */
 + (void)mj_setupIgnoredPropertyNames:(MJIgnoredPropertyNames)ignoredPropertyNames;
 
 /**
- *  这个数组中的属性名将会被忽略：不进行字典和模型的转换
+ *  Property names in this array will be ignored：No dictionary and model conversion
  */
 + (NSMutableArray *)mj_totalIgnoredPropertyNames;
 
-#pragma mark - 归档属性白名单配置
+#pragma mark - Archive attribute whitelist configuration
 /**
- *  这个数组中的属性名才会进行归档
+ *  The attribute names in this array will be archived
  *
- *  @param allowedCodingPropertyNames          这个数组中的属性名才会进行归档
+ *  @param allowedCodingPropertyNames          The attribute names in this array will be archived
  */
 + (void)mj_setupAllowedCodingPropertyNames:(MJAllowedCodingPropertyNames)allowedCodingPropertyNames;
 
 /**
- *  这个数组中的属性名才会进行字典和模型的转换
+ *  The attribute names in this array will be converted from dictionary to model
  */
 + (NSMutableArray *)mj_totalAllowedCodingPropertyNames;
 
-#pragma mark - 归档属性黑名单配置
+#pragma mark - Archive attribute blacklist configuration
 /**
- *  这个数组中的属性名将会被忽略：不进行归档
+ *  Property names in this array will be ignored：Do not archive
  *
- *  @param ignoredCodingPropertyNames          这个数组中的属性名将会被忽略：不进行归档
+ *  @param ignoredCodingPropertyNames          
+* Property names in this array will be ignored：Do not archive
  */
 + (void)mj_setupIgnoredCodingPropertyNames:(MJIgnoredCodingPropertyNames)ignoredCodingPropertyNames;
 
 /**
- *  这个数组中的属性名将会被忽略：不进行归档
+ *  
+Property names in this array will be ignored：Do not archive
  */
 + (NSMutableArray *)mj_totalIgnoredCodingPropertyNames;
 
-#pragma mark - 内部使用
+#pragma mark - internal use
 + (void)mj_setupBlockReturnValue:(id (^)(void))block key:(const char *)key;
 @end
