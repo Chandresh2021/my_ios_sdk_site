@@ -3,8 +3,8 @@
 //  MJExtensionExample
 //
 //  Created by MJ Lee on 15/4/17.
-//  Copyright (c) 2015年 小码哥. All rights reserved.
-//  包装一个成员属性
+//  Copyright (c) 2015year Little Code. All rights reserved.
+//  Wrap a member attribute
 
 #import <Foundation/Foundation.h>
 #import <objc/runtime.h>
@@ -12,41 +12,42 @@
 #import "MJPropertyKey.h"
 
 /**
- *  包装一个成员
+ *  Pack a member
  */
 @interface MJProperty : NSObject
-/** 成员属性 */
+/** Member attributes */
 @property (nonatomic, assign) objc_property_t property;
-/** 成员属性的名字 */
+/** The name of the member attribute */
 @property (nonatomic, readonly) NSString *name;
 
-/** 成员属性的类型 */
+/** Member attribute type */
 @property (nonatomic, readonly) MJPropertyType *type;
-/** 成员属性来源于哪个类（可能是父类） */
+/** Which class the member attribute comes from（May be the parent class） */
 @property (nonatomic, assign) Class srcClass;
 
-/**** 同一个成员属性 - 父类和子类的行为可能不一致（originKey、propertyKeys、objectClassInArray） ****/
-/** 设置最原始的key */
+/**** Same member attribute - The behavior of parent and child may be inconsistent（originKey、propertyKeys、objectClassInArray） ****/
+/** Set the most original key */
 - (void)setOriginKey:(id)originKey forClass:(Class)c;
-/** 对应着字典中的多级key（里面存放的数组，数组里面都是MJPropertyKey对象） */
+/** Corresponds to the multi-level key in the dictionary（The array stored inside，There are all MJPropertyKey objects in the array） */
 - (NSArray *)propertyKeysForClass:(Class)c;
 
-/** 模型数组中的模型类型 */
+/** Model type in the model array */
 - (void)setObjectClassInArray:(Class)objectClass forClass:(Class)c;
 - (Class)objectClassInArrayForClass:(Class)c;
-/**** 同一个成员变量 - 父类和子类的行为可能不一致（key、keys、objectClassInArray） ****/
+/**** The same member variable - The behavior of parent and child may be inconsistent（key、keys、objectClassInArray） ****/
 
 /**
- * 设置object的成员变量值
+ * Set the value of the member variable of the object
  */
 - (void)setValue:(id)value forObject:(id)object;
 /**
- * 得到object的成员属性值
+ * 
+Get the member attribute value of object
  */
 - (id)valueForObject:(id)object;
 
 /**
- *  初始化
+ *  initialization
  */
 + (instancetype)cachedPropertyWithProperty:(objc_property_t)property;
 
