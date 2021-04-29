@@ -3,7 +3,7 @@
 //  MJExtension
 //
 //  Created by mj on 14-1-15.
-//  Copyright (c) 2014年 小码哥. All rights reserved.
+//  Copyright (c) 2014year Little Code. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -15,28 +15,28 @@
 @protocol MJCoding <NSObject>
 @optional
 /**
- *  这个数组中的属性名才会进行归档
+ *  The attribute names in this array will be archived
  */
 + (NSArray *)mj_allowedCodingPropertyNames;
 /**
- *  这个数组中的属性名将会被忽略：不进行归档
+ *  Property names in this array will be ignored：Do not archive
  */
 + (NSArray *)mj_ignoredCodingPropertyNames;
 @end
 
 @interface NSObject (MJCoding) <MJCoding>
 /**
- *  解码（从文件中解析对象）
+ *  decoding（Parse the object from the file）
  */
 - (void)mj_decode:(NSCoder *)decoder;
 /**
- *  编码（将对象写入文件中）
+ *  coding（Write object to file）
  */
 - (void)mj_encode:(NSCoder *)encoder;
 @end
 
 /**
- 归档的实现
+ Archiving realization
  */
 #define MJCodingImplementation \
 - (id)initWithCoder:(NSCoder *)decoder \
