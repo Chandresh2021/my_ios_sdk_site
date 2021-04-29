@@ -3,7 +3,7 @@
 //  MJExtensionExample
 //
 //  Created by MJ Lee on 15/8/11.
-//  Copyright (c) 2015年 小码哥. All rights reserved.
+//  Copyright (c) 2015year Little Code. All rights reserved.
 //
 
 #import "NSObject+MJClass.h"
@@ -43,21 +43,21 @@ static const char MJIgnoredCodingPropertyNamesKey = '\0';
 
 + (void)mj_enumerateClasses:(MJClassesEnumeration)enumeration
 {
-    // 1.没有block就直接返回
+    // 1.Return directly without block
     if (enumeration == nil) return;
     
-    // 2.停止遍历的标记
+    // 2.Stop traversal marker
     BOOL stop = NO;
     
-    // 3.当前正在遍历的类
+    // 3.The class currently being traversed
     Class c = self;
     
-    // 4.开始遍历每一个类
+    // 4.Start traversing each class
     while (c && !stop) {
-        // 4.1.执行操作
+        // 4.1.Perform operation
         enumeration(c, &stop);
         
-        // 4.2.获得父类
+        // 4.2.Get the parent class
         c = class_getSuperclass(c);
         
         if ([MJFoundation isClassFromFoundation:c]) break;
@@ -66,26 +66,26 @@ static const char MJIgnoredCodingPropertyNamesKey = '\0';
 
 + (void)mj_enumerateAllClasses:(MJClassesEnumeration)enumeration
 {
-    // 1.没有block就直接返回
+    // 1.Return directly without block
     if (enumeration == nil) return;
     
-    // 2.停止遍历的标记
+    // 2.Stop traversal marker
     BOOL stop = NO;
     
-    // 3.当前正在遍历的类
+    // 3.The class currently being traversed
     Class c = self;
     
-    // 4.开始遍历每一个类
+    // 4.Start traversing each class
     while (c && !stop) {
-        // 4.1.执行操作
+        // 4.1.Perform operation
         enumeration(c, &stop);
         
-        // 4.2.获得父类
+        // 4.2.Get the parent class
         c = class_getSuperclass(c);
     }
 }
 
-#pragma mark - 属性黑名单配置
+#pragma mark - Property blacklist configuration
 + (void)mj_setupIgnoredPropertyNames:(MJIgnoredPropertyNames)ignoredPropertyNames
 {
     [self mj_setupBlockReturnValue:ignoredPropertyNames key:&MJIgnoredPropertyNamesKey];
@@ -96,7 +96,7 @@ static const char MJIgnoredCodingPropertyNamesKey = '\0';
     return [self mj_totalObjectsWithSelector:@selector(mj_ignoredPropertyNames) key:&MJIgnoredPropertyNamesKey];
 }
 
-#pragma mark - 归档属性黑名单配置
+#pragma mark - Archive attribute blacklist configuration
 + (void)mj_setupIgnoredCodingPropertyNames:(MJIgnoredCodingPropertyNames)ignoredCodingPropertyNames
 {
     [self mj_setupBlockReturnValue:ignoredCodingPropertyNames key:&MJIgnoredCodingPropertyNamesKey];
@@ -107,7 +107,7 @@ static const char MJIgnoredCodingPropertyNamesKey = '\0';
     return [self mj_totalObjectsWithSelector:@selector(mj_ignoredCodingPropertyNames) key:&MJIgnoredCodingPropertyNamesKey];
 }
 
-#pragma mark - 属性白名单配置
+#pragma mark - Attribute whitelist configuration
 + (void)mj_setupAllowedPropertyNames:(MJAllowedPropertyNames)allowedPropertyNames;
 {
     [self mj_setupBlockReturnValue:allowedPropertyNames key:&MJAllowedPropertyNamesKey];
@@ -118,7 +118,7 @@ static const char MJIgnoredCodingPropertyNamesKey = '\0';
     return [self mj_totalObjectsWithSelector:@selector(mj_allowedPropertyNames) key:&MJAllowedPropertyNamesKey];
 }
 
-#pragma mark - 归档属性白名单配置
+#pragma mark - Archive attribute whitelist configuration
 + (void)mj_setupAllowedCodingPropertyNames:(MJAllowedCodingPropertyNames)allowedCodingPropertyNames
 {
     [self mj_setupBlockReturnValue:allowedCodingPropertyNames key:&MJAllowedCodingPropertyNamesKey];
@@ -129,7 +129,7 @@ static const char MJIgnoredCodingPropertyNamesKey = '\0';
     return [self mj_totalObjectsWithSelector:@selector(mj_allowedCodingPropertyNames) key:&MJAllowedCodingPropertyNamesKey];
 }
 
-#pragma mark - block和方法处理:存储block的返回值
+#pragma mark - block and method processing:Store the return value of the block
 + (void)mj_setupBlockReturnValue:(id (^)(void))block key:(const char *)key
 {
     if (block) {
@@ -138,7 +138,7 @@ static const char MJIgnoredCodingPropertyNamesKey = '\0';
         objc_setAssociatedObject(self, key, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
     
-    // 清空数据
+    // Clear data
     MJExtensionSemaphoreCreate
     MJExtensionSemaphoreWait
     [[self classDictForKey:key] removeAllObjects];
@@ -152,7 +152,7 @@ static const char MJIgnoredCodingPropertyNamesKey = '\0';
     
     NSMutableArray *array = [self classDictForKey:key][NSStringFromClass(self)];
     if (array == nil) {
-        // 创建、存储
+        // create、storage
         [self classDictForKey:key][NSStringFromClass(self)] = array = [NSMutableArray array];
         
         if ([self respondsToSelector:selector]) {
