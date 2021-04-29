@@ -3,7 +3,7 @@
 //  MJExtensionExample
 //
 //  Created by MJ Lee on 15/6/7.
-//  Copyright (c) 2015年 小码哥. All rights reserved.
+//  Copyright (c) 2015year Little Code. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -11,19 +11,19 @@
 
 @interface NSString (MJExtension)
 /**
- *  驼峰转下划线（loveYou -> love_you）
+ *  Hump ​​to underline（loveYou -> love_you）
  */
 - (NSString *)mj_underlineFromCamel;
 /**
- *  下划线转驼峰（love_you -> loveYou）
+ *  Underscore to hump（love_you -> loveYou）
  */
 - (NSString *)mj_camelFromUnderline;
 /**
- * 首字母变大写
+ * Capitalize the first letter
  */
 - (NSString *)mj_firstCharUpper;
 /**
- * 首字母变小写
+ * Lowercase first letter
  */
 - (NSString *)mj_firstCharLower;
 
@@ -33,10 +33,10 @@
 @end
 
 @interface NSString (MJExtensionDeprecated_v_2_5_16)
-- (NSString *)underlineFromCamel MJExtensionDeprecated("请在方法名前面加上mj_前缀，使用mj_***");
-- (NSString *)camelFromUnderline MJExtensionDeprecated("请在方法名前面加上mj_前缀，使用mj_***");
-- (NSString *)firstCharUpper MJExtensionDeprecated("请在方法名前面加上mj_前缀，使用mj_***");
-- (NSString *)firstCharLower MJExtensionDeprecated("请在方法名前面加上mj_前缀，使用mj_***");
-- (BOOL)isPureInt MJExtensionDeprecated("请在方法名前面加上mj_前缀，使用mj_***");
-- (NSURL *)url MJExtensionDeprecated("请在方法名前面加上mj_前缀，使用mj_***");
+- (NSString *)underlineFromCamel MJExtensionDeprecated("Please prefix the method name with mj_，Use mj_***");
+- (NSString *)camelFromUnderline MJExtensionDeprecated("Please prefix the method name with mj_，Use mj_***");
+- (NSString *)firstCharUpper MJExtensionDeprecated("Please prefix the method name with mj_，Use mj_***");
+- (NSString *)firstCharLower MJExtensionDeprecated("Please prefix the method name with mj_，Use mj_***");
+- (BOOL)isPureInt MJExtensionDeprecated("Please prefix the method name with mj_，Use mj_***");
+- (NSURL *)url MJExtensionDeprecated("Please prefix the method name with mj_，Use mj_***");
 @end
