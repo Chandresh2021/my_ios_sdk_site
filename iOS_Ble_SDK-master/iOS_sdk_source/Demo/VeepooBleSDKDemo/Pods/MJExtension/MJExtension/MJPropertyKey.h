@@ -3,27 +3,27 @@
 //  MJExtensionExample
 //
 //  Created by MJ Lee on 15/8/11.
-//  Copyright (c) 2015年 小码哥. All rights reserved.
+//  Copyright (c) 2015year Little Code. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
 typedef enum {
-    MJPropertyKeyTypeDictionary = 0, // 字典的key
-    MJPropertyKeyTypeArray // 数组的key
+    MJPropertyKeyTypeDictionary = 0, // Dictionary key
+    MJPropertyKeyTypeArray // Array key
 } MJPropertyKeyType;
 
 /**
- *  属性的key
+ *  Attribute key
  */
 @interface MJPropertyKey : NSObject
 /** key的名字 */
 @property (copy,   nonatomic) NSString *name;
-/** key的种类，可能是@"10"，可能是@"age" */
+/** Type of key，maybe@"10"，maybe@"age" */
 @property (assign, nonatomic) MJPropertyKeyType type;
 
 /**
- *  根据当前的key，也就是name，从object（字典或者数组）中取值
+ *  According to the current key，Which is name，从object（Dictionary or array）Medium value
  */
 - (id)valueInObject:(id)object;
 
