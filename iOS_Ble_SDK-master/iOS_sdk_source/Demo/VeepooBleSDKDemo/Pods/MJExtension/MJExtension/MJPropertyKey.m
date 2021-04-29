@@ -3,7 +3,7 @@
 //  MJExtensionExample
 //
 //  Created by MJ Lee on 15/8/11.
-//  Copyright (c) 2015年 小码哥. All rights reserved.
+//  Copyright (c) 2015year Little Code. All rights reserved.
 //
 
 #import "MJPropertyKey.h"
