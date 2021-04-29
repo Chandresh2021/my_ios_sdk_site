@@ -3,7 +3,7 @@
 //  MJExtension
 //
 //  Created by mj on 14-1-15.
-//  Copyright (c) 2014年 小码哥. All rights reserved.
+//  Copyright (c) 2014year Little Code. All rights reserved.
 //
 
 #import "MJPropertyType.h"
@@ -35,7 +35,7 @@
     return type;
 }
 
-#pragma mark - 公共方法
+#pragma mark - Public method
 - (void)setCode:(NSString *)code
 {
     _code = code;
@@ -47,7 +47,7 @@
     } else if (code.length == 0) {
         _KVCDisabled = YES;
     } else if (code.length > 3 && [code hasPrefix:@"@\""]) {
-        // 去掉@"和"，截取中间的类型名称
+        // Remove @" and"，Intercept the type name in the middle
         _code = [code substringWithRange:NSMakeRange(2, code.length - 3)];
         _typeClass = NSClassFromString(_code);
         _fromFoundation = [MJFoundation isClassFromFoundation:_typeClass];
@@ -59,7 +59,7 @@
         _KVCDisabled = YES;
     }
     
-    // 是否为数字类型
+    // Whether it is a number type
     NSString *lowerCode = _code.lowercaseString;
     NSArray *numberTypes = @[MJPropertyTypeInt, MJPropertyTypeShort, MJPropertyTypeBOOL1, MJPropertyTypeBOOL2, MJPropertyTypeFloat, MJPropertyTypeDouble, MJPropertyTypeLong, MJPropertyTypeLongLong, MJPropertyTypeChar];
     if ([numberTypes containsObject:lowerCode]) {
