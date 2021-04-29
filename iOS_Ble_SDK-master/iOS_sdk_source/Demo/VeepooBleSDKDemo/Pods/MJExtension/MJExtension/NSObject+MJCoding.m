@@ -3,7 +3,7 @@
 //  MJExtension
 //
 //  Created by mj on 14-1-15.
-//  Copyright (c) 2014年 小码哥. All rights reserved.
+//  Copyright (c) 2014year Little Code. All rights reserved.
 //
 
 #import "NSObject+MJCoding.h"
@@ -21,7 +21,7 @@
     NSArray *ignoredCodingPropertyNames = [clazz mj_totalIgnoredCodingPropertyNames];
     
     [clazz mj_enumerateProperties:^(MJProperty *property, BOOL *stop) {
-        // 检测是否被忽略
+        // Whether the test is ignored
         if (allowedCodingPropertyNames.count && ![allowedCodingPropertyNames containsObject:property.name]) return;
         if ([ignoredCodingPropertyNames containsObject:property.name]) return;
         
@@ -39,12 +39,12 @@
     NSArray *ignoredCodingPropertyNames = [clazz mj_totalIgnoredCodingPropertyNames];
     
     [clazz mj_enumerateProperties:^(MJProperty *property, BOOL *stop) {
-        // 检测是否被忽略
+        // Whether the test is ignored
         if (allowedCodingPropertyNames.count && ![allowedCodingPropertyNames containsObject:property.name]) return;
         if ([ignoredCodingPropertyNames containsObject:property.name]) return;
         
         id value = [decoder decodeObjectForKey:property.name];
-        if (value == nil) { // 兼容以前的MJExtension版本
+        if (value == nil) { // Compatible with previous MJExtension version
             value = [decoder decodeObjectForKey:[@"_" stringByAppendingString:property.name]];
         }
         if (value == nil) return;
