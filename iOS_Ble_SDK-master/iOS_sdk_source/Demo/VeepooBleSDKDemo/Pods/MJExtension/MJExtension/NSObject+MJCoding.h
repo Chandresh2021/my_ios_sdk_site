@@ -10,7 +10,7 @@
 #import "MJExtensionConst.h"
 
 /**
- *  Codeing协议
+ *  Codeing protocol
  */
 @protocol MJCoding <NSObject>
 @optional
